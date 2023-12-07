@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 def print_sorted_dictionary(a_dictionary):
-    lst = []
-    for k, v in a_dictionary:
-        lst.append(k)
-    lst.sort()
-
+    for k in sorted(a_dictionary):
+        print(f"{k}: {a_dictionary[k]}")
+        
