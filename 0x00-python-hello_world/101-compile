@@ -1,2 +1,4 @@
-#!/usr/bin/python
-
+#!/bin/bash
+export $PYFILEc="main.pyc"
+python3 -m $PYFILE $PYFILEc
+echo "Compiling $PYFILE ..."
