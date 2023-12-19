@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 class Square:
-    ''' represents a square'''
+    """Represents a square"""
     pass
