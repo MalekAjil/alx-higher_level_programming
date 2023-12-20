@@ -10,8 +10,8 @@ class Square:
             size (:obj:`int`, optional): the size of the square
         Attributes:
             __size (int): the square size"""
-        if(type(size) != int):
+        if type(size) != int:
             raise TypeError("size must be an integer")
-        if(size < 0):
+        if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
