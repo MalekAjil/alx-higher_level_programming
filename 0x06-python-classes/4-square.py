@@ -10,9 +10,9 @@ class Square:
             size (:obj:`int`, optional): the size of the square
         Attributes:
             __size (int): the square size"""
-        if(type(size) != int):
+        if type(size) != int:
             raise TypeError("size must be an integer")
-        elif(size < 0):
+        elifsize < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
 
@@ -29,7 +29,7 @@ class Square:
     def size(self, value):
         """Sets the size"""
         self.__size = value
-        if(type(value) != int):
+        if type(value) != int:
             raise TypeError("size must be an integer")
-        if(value < 0):
+        if value < 0:
             raise ValueError("size must be >= 0")
