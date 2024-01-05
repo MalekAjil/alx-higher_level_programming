@@ -1,7 +1,12 @@
 #!/usr/bin/python3
 """ Rectangle Class """
+
+
 class Rectangle:
-    """ Represents a rectangle """
+    """ Represents a rectangle 
+    Arg __width: the width of the rectangle
+    Ard __heigh: the height of the rectangle
+    """
     __width = 0
     __height = 0
 
