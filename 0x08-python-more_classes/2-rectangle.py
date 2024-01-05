@@ -5,7 +5,10 @@
 class Rectangle:
     """ Represents a rectangle
     Arg __width: the width of the rectangle
-    Ard __heigh: the height of the rectangle
+    Arg __heigh: the height of the rectangle
+
+    area: returns the area of the rectangle
+    perimeter: returns perimeter
     """
     def __init__(self, width=0, height=0):
         if type(width) != int:
@@ -42,3 +45,11 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        return self.__width * self.__height
+
+    def perimeter(self):
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return 2 * (self.__width + self.__height)
