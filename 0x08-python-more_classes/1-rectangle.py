@@ -7,8 +7,8 @@ class Rectangle:
     Arg __width: the width of the rectangle
     Ard __heigh: the height of the rectangle
     """
-    __width = 0
-    __height = 0
+    #__width
+    #__height
 
     def __init__(self, width=0, height=0):
         self.__width = width
