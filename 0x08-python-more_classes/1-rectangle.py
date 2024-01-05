@@ -8,14 +8,14 @@ class Rectangle:
     Ard __heigh: the height of the rectangle
     """
     def __init__(self, width=0, height=0):
-        if type(value) != int:
+        if type(width) != int:
             raise TypeError("width must be an integer")
-        if value < 0:
+        if width < 0:
             raise ValueError("width must be >= 0")
         self.__width = width
-        if type(value) != int:
+        if type(height) != int:
             raise TypeError("height must be an integer")
-        if value < 0:
+        if height < 0:
             raise ValueError("height must be >= 0")
         self.__height = height
 
