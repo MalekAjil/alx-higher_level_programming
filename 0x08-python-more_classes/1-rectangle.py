@@ -3,7 +3,7 @@
 
 
 class Rectangle:
-    """ Represents a rectangle 
+    """ Represents a rectangle
     Arg __width: the width of the rectangle
     Ard __heigh: the height of the rectangle
     """
