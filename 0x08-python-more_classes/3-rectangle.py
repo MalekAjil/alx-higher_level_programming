@@ -54,7 +54,7 @@ class Rectangle:
             return 0
         return 2 * (self.__width + self.__height)
 
-    def print():
+    def __print__(self):
         if self.__width == 0 or self.__height == 0:
             return ""
         r = ""
@@ -64,7 +64,7 @@ class Rectangle:
             r += "\n"
         return r
 
-    def str():
+    def __str__(self):
         if self.__width == 0 or self.__height == 0:
             return ""
         r = ""
