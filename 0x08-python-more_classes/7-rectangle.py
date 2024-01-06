@@ -61,7 +61,7 @@ class Rectangle:
         r = ""
         for h in range(self.__height):
             for w in range(self.__width):
-                r += Rectangle.print_symbol
+                r += str(self.print_symbol)
             if h != self.__height - 1:
                 r += "\n"
         return r
@@ -72,7 +72,7 @@ class Rectangle:
         r = ""
         for h in range(self.__height):
             for w in range(self.__width):
-                r += Rectangle.print_symbol
+                r += str(self.print_symbol)
             if h != self.__height - 1:
                 r += "\n"
         return r
