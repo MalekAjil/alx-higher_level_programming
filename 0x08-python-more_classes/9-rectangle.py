@@ -98,8 +98,5 @@ class Rectangle:
         else:
             return rect_2
 
-    def square(cls, size=0):
-        sq = Rectangle(size, size)
-        sq.width = size
-        sq.height = size
-        return sq
+    def square(size=0):
+        return Rectangle(size, size)
