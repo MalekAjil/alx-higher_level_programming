@@ -3,7 +3,18 @@
 
 
 def matrix_divided(matrix, div):
-    """ devides all elements of a matrix """
+    """divide matrix by div and returns the result.
+
+    Args:
+        matrix: list of lists of integers or floats
+        div: the division 
+
+    Returns:
+        matrix devided by div
+
+    Raises:
+        TypeError: if matrix elements not integers or floats
+        """
     try:
         if (not isinstance(matrix, (list, float)) or
                 not all(isinstance(row, (list, float)) for row in matrix)):
