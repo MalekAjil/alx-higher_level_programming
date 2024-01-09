@@ -11,4 +11,4 @@ def add_attribute(self, name, value):
     Raise a TypeError exception, with the message 
     can't add new attribute if the object can’t have new attribute     
     """
-    pass
+    raise TypeError("can't add new attribute")
