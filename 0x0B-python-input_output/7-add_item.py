@@ -15,8 +15,11 @@ my_list = []
 try:
     my_list = load_from_json_file(filename)
 except Exception as ex:
+    pass
+try:
+    my_list.extend(sys.argv[1:])
+except Exception as ex:
     print(ex)
-my_list.append(sys.argv)
 try:
     save_to_json_file(my_list, filename)
 except Exception as ex:
