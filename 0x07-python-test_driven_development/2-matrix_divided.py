@@ -7,7 +7,7 @@ def matrix_divided(matrix, div):
 
     Args:
         matrix: list of lists of integers or floats
-        div: the division 
+        div: the division
 
     Returns:
         matrix devided by div
@@ -37,4 +37,4 @@ def matrix_divided(matrix, div):
             res.append(rr)
         return res
     except (TypeError, ZeroDivisionError) as ex:
-        print(ex)
+        return ex
