@@ -19,10 +19,11 @@ def matrix_divided(matrix, div):
         if not isinstance(matrix, (list, float)):
             raise TypeError("matrix must be a matrix (list of lists) " +
                             "of integers/floats")
-        for x in matrix:
-            if not isinstance(x, (list, int, float)):
-                raise TypeError("matrix must be a matrix (list of lists) " +
-                                "of integers/floats")
+        for row in matrix:
+            for x in row:
+                if not isinstance(x, (list, int, float)):
+                    raise TypeError("matrix must be a matrix (list of lists)" +
+                                    " of integers/floats")
         ln = len(matrix[0])
         for row in matrix:
             if len(row) != ln:
@@ -40,4 +41,4 @@ def matrix_divided(matrix, div):
             res.append(rr)
         return res
     except (TypeError, ZeroDivisionError) as ex:
-        print(ex)
+        return ex
