@@ -37,4 +37,4 @@ def matrix_divided(matrix, div):
             res.append(rr)
         return res
     except (TypeError, ZeroDivisionError) as ex:
-        return ex
+        print(ex)

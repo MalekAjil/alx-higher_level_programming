@@ -7,3 +7,15 @@ matrix = [
 ]
 print(matrix_divided(matrix, 3))
 print(matrix)
+
+matrix = [[3, 9], [12, 15]]
+print(matrix_divided(matrix, 0))
+print(matrix)
+
+matrix = [[3, 9], [12, 15, 3]]
+print(matrix_divided(matrix, 3))
+print(matrix)
+
+matrix =  [[3, '9'], [15, 3]]
+print(matrix_divided(matrix, 3))
+print(matrix)
