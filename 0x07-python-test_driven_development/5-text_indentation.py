@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""""""
+"""Text Identation
+"""
 
 
 def text_indentation(text):
@@ -14,10 +15,11 @@ def text_indentation(text):
     try:
         if not isinstance(text, str):
             raise TypeError("text must be a string")
-        for c in text:
-            if c == '.' or c == '?' or c == ';':
-                print('\n')
+        for c in range(len(text)):
+            if text[c] == '.' or text[c] == '?' or text[c] == ';':
+                print(f'{text[c]}\n')
+                continue
             else:
-                print(c, end='')
+                print(text[c], end='')
     except TypeError as te:
         print(te)
