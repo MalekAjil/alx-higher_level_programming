@@ -92,3 +92,14 @@ class Rectangle(Base):
         else:
             raise TypeError("y must be an integer")
 
+    def area(self):
+        """Returns the area of the rectangle"""
+        return self.__width * self.__height
+
+    def display(self):
+        """prints in stdout the Rectangle instance with the character #"""
+        print("\n" * self.__y, end='')
+        for row in range(self.__height):
+            print(" " * self.__x, end='')
+            print("#" * self.__width)
+
