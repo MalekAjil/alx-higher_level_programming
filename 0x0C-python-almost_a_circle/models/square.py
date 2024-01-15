@@ -17,6 +17,7 @@ class Square(Rectangle):
             id: the object id
         """
         Rectangle.__init__(self, size, size, x, y, id)
+        self.__size = size
 
     def __str__(self):
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
@@ -24,14 +25,15 @@ class Square(Rectangle):
     @property
     def size(self):
         """Returns the size"""
-        return self.__size
+        return self.width
 
     @size.setter
     def size(self, value):
         """Sets the size"""
         if type(value) is int:
             if value > 0:
-                self.__size = value
+                self.width = value
+                self.height = value
             else:
                 raise ValueError("size must be > 0")
         else:
