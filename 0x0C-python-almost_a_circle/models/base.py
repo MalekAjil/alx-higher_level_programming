@@ -122,3 +122,12 @@ class Base:
                 instance = cls.create(**dict_obj)
                 list_instances.append(instance)
         return list_instances
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """opens a window and draws all the Rectangles and Squares
+        Args:
+            list_rectangles: the rectangles list
+            list_squares: the squares list
+        """
+        pass
