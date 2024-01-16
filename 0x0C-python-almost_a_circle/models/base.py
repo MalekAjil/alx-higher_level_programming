@@ -48,3 +48,19 @@ class Base:
         """
         if json_string is None:
             return []
+        return json.JSONEncoder().encode(json_string)
+
+    def create(cls, **dictionary):
+        """returns an instance with all attributes already set
+        Args:
+            cls: the class name
+            dictionary: can be thought of as a double pointer to a dictionary
+        """
+        pass
+
+    def load_from_file(cls):
+        """returns a list of instances
+        Args:
+            cls: the class name
+        """
+        pass
