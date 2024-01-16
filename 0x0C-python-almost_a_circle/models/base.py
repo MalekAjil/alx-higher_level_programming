@@ -65,4 +65,11 @@ class Base:
         Args:
             cls: the class name
         """
-        pass
+        fn = cls.__name__ + ".json"
+        if not os.path.exists(fn):
+            return []
+        with open(fn, "r") as fp:
+            str = fp.read()
+        list_dicts = cls.from_json_string(str)
+        list_instances = [cls.create(**d) for d in list_dicts]
+        return list_instances
