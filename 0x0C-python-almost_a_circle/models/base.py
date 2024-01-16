@@ -35,11 +35,11 @@ class Base:
             list_objs: is a list of instances who inherits of Base
         """
         if list_objs is None:
-            with open(cls+".json", "w") as fp:
-                json.dump(obj=list_objs, cls=cls, fp=fp)
-        else:
-            with open(cls+".json", "w") as fp:
-                json.dump(obj=list_objs, cls=cls, fp=fp)
+            list_objs = []
+        json_list = cls.to_json_string([o.to_dictionary() for o in list_objs])
+        fn = cls.__name__ + ".json"
+        with open(fn, "w") as fp:
+            fp.write(json_list)
 
     def from_json_string(json_string):
         """returns the list of the JSON string representation json_string
@@ -48,7 +48,7 @@ class Base:
         """
         if json_string is None:
             return []
-        return json.JSONEncoder().encode(json_string)
+        return json.loads(json_string)
 
     def create(cls, **dictionary):
         """returns an instance with all attributes already set
@@ -56,7 +56,9 @@ class Base:
             cls: the class name
             dictionary: can be thought of as a double pointer to a dictionary
         """
-        pass
+        tmp = cls(1, 1)
+        tmp.update(**dictionary)
+        return tmp
 
     def load_from_file(cls):
         """returns a list of instances
