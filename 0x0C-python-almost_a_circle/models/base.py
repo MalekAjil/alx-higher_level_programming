@@ -40,3 +40,11 @@ class Base:
         else:
             with open(cls+".json", "w") as fp:
                 json.dump(obj=list_objs, cls=cls, fp=fp)
+
+    def from_json_string(json_string):
+        """returns the list of the JSON string representation json_string
+        Args:
+            json_string: is a string representing a list of dictionaries
+        """
+        if json_string is None:
+            return []
