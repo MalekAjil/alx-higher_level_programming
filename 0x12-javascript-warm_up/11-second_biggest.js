@@ -5,10 +5,12 @@ if (process.argv.length <= 3) {
   let max = 0;
   let smax = 0;
   for (let i = 2; i < process.argv.length; i++) {
-    let x = parseInt(process.argv[i]);
-    if (x > smax) { smax = x;}
+    const x = parseInt(process.argv[i]);
+    if (x > smax) {
+      smax = x;
+    }
     if (smax > max) {
-      let t = max;
+      const t = max;
       max = smax;
       smax = t;
     }
