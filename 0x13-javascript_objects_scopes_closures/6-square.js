@@ -1,15 +1,17 @@
 #!/usr/bin/node
-const SQ = require('./5-square');
-class Square extends SQ {
+const square = require('./5-square');
+class Square extends square {
   constructor (size) {
     super(size);
   }
 
   charPrint (c) {
-    if (isNaN(c))
+    if (isNaN(c)) {
       c = 'X';
-    for (let i = 0; i < this.size; i++)
+    }
+    for (let i = 0; i < this.size; i++) {
       console.log(c.repeat(this.size));
+    }
   }
 }
 module.exports = Square;
