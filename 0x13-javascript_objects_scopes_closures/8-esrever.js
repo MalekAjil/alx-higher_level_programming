@@ -5,4 +5,4 @@ exports.esrever = function (list) {
     rev[i] = list[list.length - 1 - i];
   }
   return rev;
-}
+};
