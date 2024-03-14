@@ -7,5 +7,6 @@ Object.keys(dict).map(id => {
     sorted[occ] = [];
   }
   sorted[occ].push(id);
+  return sorted;
 });
 console.log(sorted);
