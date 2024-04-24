@@ -6,7 +6,7 @@ class Square extends square {
   }
 
   charPrint (c) {
-    if (isNaN(c)) {
+    if (typeof(c) == 'undefined' || c === null) {
       c = 'X';
     }
     for (let i = 0; i < this.size; i++) {
