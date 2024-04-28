@@ -18,7 +18,7 @@ if __name__ == "__main__":
                 FROM cities
                 WHERE cities.state_id = (SELECT states.id FROM states
                 WHERE states.name = %s)
-                ORDER BY cities.id ASC;""",(state_name,))
+                ORDER BY cities.id ASC;""", (state_name,))
     rows = cur.fetchall()
     cities = []
     for name in rows:
