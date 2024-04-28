@@ -17,7 +17,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    instance = session.query(State).filter(State.name == state_name).first()
+    instance = session.query(State).filter(State.name.like(state_name)).first()
     if instance is None:
         print("Not<F12> found")
     else:
