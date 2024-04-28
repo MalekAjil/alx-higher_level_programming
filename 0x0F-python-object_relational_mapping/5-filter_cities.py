@@ -22,7 +22,8 @@ if __name__ == "__main__":
     rows = cur.fetchall()
     for row in rows:
         for col in row:
-            print("%s, " %col, end='')
+            print("%s" %col, end='')
+        print(", ", end='')
     print()
     cur.close()
     db.close()
