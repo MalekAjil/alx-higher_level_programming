@@ -19,6 +19,6 @@ if __name__ == "__main__":
     session = Session()
     instance = session.query(State).filter(State.name.like(state_name)).first()
     if instance is None:
-        print("Not<F12> found")
+        print("Not found")
     else:
         print(instance.id)
