@@ -14,16 +14,15 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host="localhost", port=3306,
                          user=username, passwd=password, db=database)
     cur = db.cursor()
-    cur.execute("""SELECT cities.name
+    cur.execute(f"""SELECT cities.name
                 FROM cities
                 WHERE cities.state_id = (SELECT states.id FROM states
-                WHERE states.name = '{}')
-                ORDER BY cities.id ASC;""".format(state_name))
+                WHERE states.name = %s)
+                ORDER BY cities.id ASC;""",(state_name,))
     rows = cur.fetchall()
-    for row in rows:
-        for col in row:
-            print("%s" %col, end='')
-        print(", ", end='')
-    print()
+    cities = []
+    for name in rows:
+        cities.append(name[0])
+    print(', '.join(cities))
     cur.close()
     db.close()
