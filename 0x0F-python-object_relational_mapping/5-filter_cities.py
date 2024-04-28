@@ -21,6 +21,8 @@ if __name__ == "__main__":
                 ORDER BY cities.id ASC;""".format(state_name))
     rows = cur.fetchall()
     for row in rows:
-        print(row)
+        for col in row:
+            print("%s, " %col, end='')
+    print()
     cur.close()
     db.close()
