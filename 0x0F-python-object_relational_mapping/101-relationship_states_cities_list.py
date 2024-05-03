@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-"""a script that lists all City objects from database
+"""a script that lists all State objects,
+and corresponding City objects,
+contained in the database hbtn_0e_101_usa
 """
 import sys
 import sqlalchemy
-from model_state import Base, State
-from model_city import City
+from relationship_state import State
+from relationship_city import City, Base
 
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
@@ -16,5 +18,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    for instance in session.query(City).order_by(City.id):
-       print(f"{instance.state.name}: ({instance.id}) {instance.name}")
+    for instance in session.query(State).order_by(State.id):
+        print(f"{instance.id}: {instance.name}")
+        for city in instance.cities:
+            print(f"\t{city.id}: {city.name}")
+
