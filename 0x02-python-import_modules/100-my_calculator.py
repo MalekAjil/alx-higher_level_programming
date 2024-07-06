@@ -12,13 +12,13 @@ if __name__ == "__main__":
     op = argv[2]
     b = int(argv[3])
     if op == '+':
-        print(add(a, b))
+        print(f"{a} {op} {b} = {add(a, b)}")
     elif op == '-':
-        print(sub(a, b))
+        print(f"{a} {op} {b} = {sub(a, b)}")
     elif op == '*':
-        print(mul(a, b))
+        print(f"{a} {op} {b} = {mul(a, b)}")
     elif op == '/':
-        print(div(a, b))
+        print(f"{a} {op} {b} = {div(a, b)}")
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
