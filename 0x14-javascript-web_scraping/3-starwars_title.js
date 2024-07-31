@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const request = require('request');
 
-function starwarsTitle(id) {
+function starwarsTitle (id) {
   request(`https://swapi-api.alx-tools.com/api/films/${id}`, (err, res) => {
     if (err) {
       console.error(`Error: ${err.message}`);
