@@ -2,11 +2,13 @@
 const request = require('request');
 
 function starwarsTitle (id) {
-  request(`https://swapi-api.alx-tools.com/api/films/${id}`, (err, res) => {
+  request(`https://swapi-api.alx-tools.com/api/films/${id}`, (err, res, content) => {
     if (err) {
       console.error(`Error: ${err.message}`);
+    } else if (res.statusCode === 200) {
+      console.log(JSON.parse(content).title);
     } else {
-      console.log(`${res.title}`);
+      console.error(`Error: ${res.statusCode}`);
     }
   });
 }
