@@ -1,23 +1,22 @@
 #!/usr/bin/node
 const request = require('request');
 
-function starwarsCount () {
-  request(`https://swapi-api.alx-tools.com/api/films`, (err, res, content) => {
+function starwarsCount (url) {
+  request(url, (err, res, content) => {
     if (err) {
       console.error(`Error: ${err.message}`);
     } else if (res.statusCode === 200) {
       const movies = JSON.parse(content);
-      let count = 0;
-      for (movie in movies) {
-	if (movie.charcter === 'Wedge Antilles') {
-	  count++;
-	}
-      }
-      console.log(count);
+      const character = 'https://swapi-api.alx-tools.com/api/people/18/';
+      const WAMovies = movies.results.filter((movie) =>
+        movie.characters.includes(character)
+      );
+      console.log(WAMovies.length);
     } else {
       console.error(`Error: ${res.statusCode}`);
     }
   });
 }
 
-starwarsCount();
+const url = process.argv[2];
+starwarsCount(url);
