@@ -1,1 +1,4 @@
-document.querySelector('header').color='#FF0000';
+$(function()
+{
+	$("header").css("font-color", "#FF0000");
+});
