@@ -1,4 +1,2 @@
-$(function()
-{
-	$("header").css("font-color", "#FF0000");
-});
+const hdr = document.querySelector('header');
+hdr.style.color = '#FF0000';
