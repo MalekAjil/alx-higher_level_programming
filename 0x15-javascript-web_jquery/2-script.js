@@ -1,3 +1,5 @@
-$("DIV#red_header").onclick({
-	$("DIV#red_header").css("color", "#FF0000");
-});
+$(document).ready(function() {
+  $("DIV #red_header").click(function() {
+    $("DIV #red_header").css("color", "#FF0000");
+  });
+});
