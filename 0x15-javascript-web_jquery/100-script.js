@@ -1,2 +1,4 @@
-const hdr = document.querySelector('header');
-hdr.style.color = '#FF0000';
+$(document).ready() {
+  const hdr = document.querySelector('header');
+  hdr.style.color = '#FF0000';
+});
