@@ -4,6 +4,7 @@ $(function () {
     for (let film in data.results) {
       const Item = $('<li></li>').text(film.title);
       $('UL#list_movies').append(Item);
+	    alert(film);
     }
   });
 });
