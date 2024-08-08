@@ -4,7 +4,6 @@ $(function () {
     data.results.forEach(function(film) {
       const Item = $('<li></li>').text(film.title);
       $('UL#list_movies').append(Item);
-	    alert(film);
     });
   });
 });
