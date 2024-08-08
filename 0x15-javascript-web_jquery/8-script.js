@@ -4,5 +4,6 @@ $(function () {
     for (let film in data.results) {
       const Item = $('<li></li>').text(film.title);
       $('UL#list_movies').text(data.name);
-    });
+    }
+  });
 });
