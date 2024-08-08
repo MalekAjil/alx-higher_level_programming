@@ -3,6 +3,5 @@ $(function () {
   $.get(url, function(data, textStatus) {
     const name = data.name;
     $('DIV#character').text(data.name);
-    alert("Done, with the following status: " + textStatus + ". Here is the response: " + data);
   });
 });
